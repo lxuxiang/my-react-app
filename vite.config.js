@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/MY-REACT-APP/',  // <--- 記得改成你的 GitHub repo 名稱
+  base: '/my-react-app/',  // ⚠️ 必須加上你的 repo 名稱
 })
