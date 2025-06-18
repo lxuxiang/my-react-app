@@ -1,10 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import MySlider from "./component/rgb-panel/MySlider";
+import MyPanel from "./component/rgb-panel/MyPanel";
+import MyCalculator from "./component/calculator/MyCalculator";
+import TicTacToe from "./component/tic-tac-toe/TicTacToe";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -16,7 +20,29 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>5b1g0012沈睿晟</h1>
+      <h2>我的第一個元件：Slider</h2>
+      <div>
+        <p>
+          R:
+          <MySlider />
+        </p>
+        <p>
+          G:
+          <MySlider />
+        </p>
+        <p>
+          B:
+          <MySlider />
+        </p>
+      </div>
+      <br />
+      <h2>第二個元件：RGB色彩面板</h2>
+      <MyPanel />
+      <h2>第三個元件:計算機</h2>
+      <MyCalculator />
+      <h2>第四個元件:井字遊戲</h2>
+      { <TicTacToe /> }
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
@@ -29,7 +55,8 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+
+export default App;
